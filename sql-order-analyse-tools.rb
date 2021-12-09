@@ -31,4 +31,24 @@ class SqlOrderAnalyseTools < Formula
     # executables being tested: `system "#{bin}/program", "do", "something"`.
     system "false"
   end
+## Bottles
+
+  # Bottles are pre-built and added by the Homebrew maintainers for you.
+  # If you maintain your own repository, you can add your own bottle links.
+  # https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Bottles.md
+  # You can ignore this block entirely if submitting to Homebrew/Homebrew, It'll be
+  # handled for you by the Brew Test Bot.
+  bottle do
+    root_url "https://github.com/kayw-geek/homebrew-tools" # Optional root to calculate bottle URLs
+    prefix "/opt/homebrew" # Optional HOMEBREW_PREFIX in which the bottles were built.
+    cellar "/opt/homebrew/kayw-geek" # Optional HOMEBREW_CELLAR in which the bottles were built.
+    revision 1 # Making the old bottle outdated without bumping the version of the formula.
+  end
+
+  def pour_bottle?
+    # Only needed if this formula has to check if using the pre-built
+    # bottle is fine.
+    true
+  end
+
 end

@@ -9,6 +9,7 @@ class SqlOrderAnalyseTools < Formula
   license ""
 
   # depends_on "cmake" => :build
+  depends_on :php => "8.0"
 
   def install
     ENV.deparallelize  # if your formula fails when building in parallel
